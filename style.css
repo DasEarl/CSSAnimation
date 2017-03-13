@@ -1,0 +1,189 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #EDE7F6;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Box 1 */
+
+.box1 {
+    position: relative;
+    width: 500px;
+    height: 20px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
+}
+.box1 .line1 {
+    background: #673AB7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    animation: w 1s 1s both;
+}
+.box1 .line2 {
+    background: #673AB7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    animation: h 1s 2s both;
+}
+.box1 .line3 {
+    background: #673AB7;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    animation: w 1s 3s both;
+}
+.box1 .line4 {
+    background: #673AB7;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    animation: h 1s 4s both;
+}
+.box1 .fill {
+    position: absolute;
+    background: #673AB7;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    animation: fill 1s 5s both;
+}
+.box1 .fill:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    overflow-y: hidden;
+    height: 100%;
+    animation: fillafter 1s 5s both;
+}
+
+/* Box 2 */
+
+.box2 {
+    position: relative;
+    width: 500px;
+    height: 20px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
+}
+.box2 .line1 {
+    background: #673AB7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    animation: w 1s 1s both;
+}
+.box2 .line2 {
+    background: #673AB7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    animation: h 1s 1s both;
+}
+.box2 .line3 {
+    background: #673AB7;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    animation: w 1s 1s both;
+}
+.box2 .line4 {
+    background: #673AB7;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    animation: h 1s 1s both;
+}
+.box2 .fill {
+    position: absolute;
+    background: #673AB7;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    overflow: hidden;
+    animation: fill 1s 2s both;
+}
+.box2 .fill:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%);
+    background-size: 100px 100%;
+    animation: background 5s 3s linear infinite;
+}
+@keyframes background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@keyframes w {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes h {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+@keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes fillafter {
+    0% {
+        content: "0%";
+    }
+    25% {
+        content: "25%";
+    }
+    50% {
+        content: "50%";
+    }
+    75% {
+        content: "75%";
+    }
+    100% {
+        content: "100%";
+    }
+}
